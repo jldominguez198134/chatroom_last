@@ -9,6 +9,8 @@ import { mainStoreReducer } from "./state-management/reducers/main.reducer";
 import { StoreModule } from "@ngrx/store";
 import {TextEditorComponent} from "./components/text-editor/text-editor.component";
 import {ChatBoardComponent} from "./components/chat-board/chat-board.component";
+import {routes} from "./app.routes";
+import {RouterModule} from "@angular/router";
 
 const reducers = { mainStoreReducer };
 
@@ -22,6 +24,7 @@ const reducers = { mainStoreReducer };
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(routes),
     StoreModule.provideStore(reducers)
   ],
   providers: [],

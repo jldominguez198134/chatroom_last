@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let user of arrayUsers">
+    <p>{{user.name.first}}</p>
+    <img src="{{user.picture.medium}}" alt="">
+  </li>
+</ul>
+<sebm-google-map [latitude]="lati" [longitude]="lng">
+  <sebm-google-map-marker [latitude]="lati" [longitude]="lng"></sebm-google-map-marker>
+</sebm-google-map>
+<app-users-form></app-users-form>
