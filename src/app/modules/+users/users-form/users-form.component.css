@@ -17,19 +17,6 @@
   flex-direction: column;
 }
 
-<<<<<<< HEAD:src/app/components/main/text-editor/text-editor.component.css
-input, textarea {
-  border: 1px solid gray;
-}
-
-input.ng-invalid.ng-dirty {
-  border: 1px solid red;
-}
-
-textarea.ng-invalid.ng-dirty {
-  border: 1px solid red;
-}
-=======
 input.ng-untouched,
 textarea.ng-untouched {
   border: 1px solid green;
@@ -56,4 +43,4 @@ textarea.ng-invalid {
   padding: 10px 0;
   text-align: center;
 }
->>>>>>> e6f5115e4360fed2f38f30e4258940e9e74d9710:src/app/components/text-editor/text-editor.component.css
+

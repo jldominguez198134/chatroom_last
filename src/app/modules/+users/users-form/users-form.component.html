@@ -1,0 +1,24 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+  <div class="input-group">
+    <label for="username"></label>
+    <input type="text" formControlName="name">
+    <div class="alert" [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+      Se requiere un nombre
+    </div>
+  </div>
+  <div class="input-group" formGroupName="address">
+    <label for="latitud"></label>
+    <input type="text" formControlName="lat">
+    <div class="alert" [hidden]="myForm.controls.address.controls.lat.valid || (myForm.controls.address.controls.lat.pristine && !submitted)">
+      Se requiere una latitud
+    </div>
+
+    <label for="longitud"></label>
+    <input type="text" formControlName="long">
+    <div class="alert" [hidden]="myForm.controls.address.controls.long.valid || (myForm.controls.address.controls.long.pristine && !submitted)">
+      Se requiere una longitud
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
