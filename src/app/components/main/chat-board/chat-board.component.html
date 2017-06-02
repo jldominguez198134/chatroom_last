@@ -1,8 +1,16 @@
 <ul class="chat-list">
   <li
     *ngFor="let message of messages; let i = index"
-    [ngClass]="{'message-left': i % 2 == 0}">
-
+    [ngClass]="{'message-left': i % 2 == 0}"
+    (@flyInOut.start)="animationStarted($event)"
+    (@flyInOut.done)="animationDone($event)"
+    [@flyInOut]="'in'">
+    <p class="green" *ngIf="cargado"
+       (@flyInOut.start)="animationStarted($event)"
+       (@flyInOut.done)="animationDone($event)"
+       [@flyInOut]="'in'">
+      Ok
+    </p>
     <p class="name">{{ message.username }}: </p>
     <p >{{ message.message }}</p>
   </li>
